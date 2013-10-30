@@ -25,13 +25,12 @@
         <div class="nav" id="nav">
             <?php 
             wp_nav_menu(array(
-'theme_location' => 'header-menu',
-'sort_column' => 'menu_order',
- 'container_id'=>'main-menu',
-'menu_id'=>'navigation',
-'menu_class'=>'main-menu')
- );
-
+				'theme_location' => 'header-menu',
+				'sort_column' => 'menu_order',
+ 				'container_id'=>'main-menu',
+				'menu_id'=>'navigation',
+				'menu_class'=>'main-menu')
+ 			);
              ?>
         </div>
     </div>
