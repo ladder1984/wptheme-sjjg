@@ -7,14 +7,11 @@
 <script language="javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery-1.4.2.js" type="text/javascript"></script>
 <script language="javascript" type="text/javascript">
 	$(document).ready(function(){
-	  
-		 $('.menu-item-has-children').mousemove(function(){
+	  $('.menu-item-has-children').mousemove(function(){
 	  $(this).find('.sub-menu').slideDown();	  });
-
 	  $('.menu-item-has-children').mouseleave(function(){
 	  $(this).find('.sub-menu').slideUp('fast');	  });
-	  
-	});
+	 });
 </script>
 </head>
 
