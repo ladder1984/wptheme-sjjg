@@ -1,6 +1,6 @@
 基于wordpress的仿站程序
 
-JPKTheme：仿站主题
+JPKTheme：精品课主题
 
 sjjp.tjuci.edu.cn.zip：源站镜像
 
