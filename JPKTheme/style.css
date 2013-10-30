@@ -112,3 +112,5 @@ a.more { color:#fff; font-size:12px; float:right; font-weight:normal; margin-rig
 
 .breadcrumbs a:link {color:#FFFFFF;}
 .breadcrumbs a:visited {color:#FFFFFF;}
+
+.linkcat li{floag:left;list-style:none;display:inline;margin:20px}
