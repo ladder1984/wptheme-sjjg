@@ -1,14 +1,14 @@
 <?php get_header(); ?>
     <div id="main">
       <div class="news">
-          <div class="title"><h2>课程简介</h2></div>
+          <div class="title"><h2><?php echo get_post(17)->post_title; ?></h2></div>
             <div class="content">
               <?php echo get_post_content_by_id(17) ?>
               
           </div>
         </div>
           <div class="news">
-          <div class="title"><h2>负责人简介</h2></div>
+          <div class="title"><h2><?php echo get_post(20)->post_title; ?></h2></div>
             <div class="content">
              <?php echo get_post_content_by_id(20) ?>
           </div>
