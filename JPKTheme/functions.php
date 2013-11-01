@@ -1,4 +1,5 @@
 <?php
+	/* 注册菜单栏 */
 	register_nav_menus(
 		array(
 			'header-menu' => 'header-menu'
@@ -6,6 +7,7 @@
 	);
 
 
+/* 获取指定文章内容 */
 function get_post_content_by_id($post_id = ''){
 	$post_content = $post_id == '' ? get_the_content() : get_post($post_id)->post_content;
 	return wpautop($post_content);
@@ -21,9 +23,17 @@ function get_post_content_by_id($post_id = ''){
 		));
 	}
 
+	/* 关闭检查更新 */
+	add_filter('pre_site_transient_update_core',    create_function('$a', "return null;")); // 关闭核心提示
+	add_filter('pre_site_transient_update_plugins', create_function('$a', "return null;")); // 关闭插件提示
+	add_filter('pre_site_transient_update_themes',  create_function('$a', "return null;")); // 关闭主题提示
+	remove_action('admin_init', '_maybe_update_core');    // 禁止 Wordpress 检查更新
+	remove_action('admin_init', '_maybe_update_plugins'); // 禁止 Wordpress 更新插件
+	remove_action('admin_init', '_maybe_update_themes');  // 禁止 Wordpress 更新主题
 
+
+	/* 面包屑导航 */
 	function dimox_breadcrumbs() {
-
 	/* === OPTIONS === */
 	$text['home']     = 'Home'; // text for the 'Home' link
 	$text['category'] = 'Archive by Category "%s"'; // text for a category page
